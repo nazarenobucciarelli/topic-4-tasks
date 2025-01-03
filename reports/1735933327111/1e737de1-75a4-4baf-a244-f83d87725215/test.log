@@ -1,0 +1,35 @@
+[2025-01-03 07:42:09] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-03 07:42:09] [67] [INFO] TEST [Preferences test - verifyAddingProductToCartTest] STARTED at [16:42:09 2025-01-03]
+[2025-01-03 07:42:09] [67] [INFO] Starting driver session...
+[2025-01-03 07:42:09] [67] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-03 07:42:17] [67] [INFO] Driver session started.
+[2025-01-03 07:42:20] [67] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-03 07:42:23] [67] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-03 07:42:25] [67] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-03 07:42:51] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-03 07:43:01] [67] [ERROR] TEST [Preferences test - verifyAddingProductToCartTest] FAILED at [16:43:01 2025-01-03] - Cannot parse null string
+
+java.base/java.lang.Integer.parseInt(Integer.java:624)
+java.base/java.lang.Integer.parseInt(Integer.java:778)
+solvd.carina.demo.gui.ios.components.HeaderComponent.getCartCount(HeaderComponent.java:26)
+solvd.carina.demo.GUITests.verifyAddingProductToCartTest(GUITests.java:73)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+java.base/java.lang.Thread.run(Thread.java:1583)

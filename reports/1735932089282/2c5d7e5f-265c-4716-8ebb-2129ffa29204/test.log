@@ -1,0 +1,36 @@
+[2025-01-03 07:21:31] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-03 07:21:31] [67] [INFO] TEST [Preferences test - verifyProductDetailTest] STARTED at [16:21:31 2025-01-03]
+[2025-01-03 07:21:31] [67] [INFO] Starting driver session...
+[2025-01-03 07:21:32] [67] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-03 07:21:39] [67] [INFO] Driver session started.
+[2025-01-03 07:21:42] [67] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-03 07:21:45] [67] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-03 07:21:47] [67] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-03 07:22:14] [67] [INFO] PASS: element 'title' is clicked.
+[2025-01-03 07:22:37] [67] [ERROR] TEST [Preferences test - verifyProductDetailTest] FAILED at [16:22:37 2025-01-03] - expected [true] but found [false]
+
+org.testng.Assert.fail(Assert.java:110)
+org.testng.Assert.failNotEquals(Assert.java:1577)
+org.testng.Assert.assertTrue(Assert.java:56)
+org.testng.Assert.assertTrue(Assert.java:66)
+solvd.carina.demo.GUITests.verifyProductDetailTest(GUITests.java:59)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+java.base/java.lang.Thread.run(Thread.java:1583)
