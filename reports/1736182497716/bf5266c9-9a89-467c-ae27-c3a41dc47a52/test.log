@@ -1,0 +1,76 @@
+[2025-01-06 04:55:00] [64] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 04:55:00] [64] [INFO] TEST [Preferences test - verifyLogOutTest] STARTED at [13:55:00 2025-01-06]
+[2025-01-06 04:55:00] [64] [INFO] Starting driver session...
+[2025-01-06 04:55:01] [64] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-06 04:55:09] [64] [INFO] Driver session started.
+[2025-01-06 04:55:12] [64] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-06 04:55:15] [64] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-06 04:55:16] [64] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-06 04:55:56] [64] [INFO] PASS: Tap on X:'20' Y:'65' was executed.
+[2025-01-06 05:34:14] [64] [ERROR] waitUntil: solvd.carina.demo.gui.ios.pages.LeftSidebarPage$$Lambda/0x000000013578b9f0@7726f000
+[2025-01-06 05:34:14] [64] [ERROR] Undefined error on capture screenshot detected!
+[2025-01-06 05:34:14] [64] [ERROR] Failure detected on screenshot generation after failure: 
+[2025-01-06 05:34:14] [64] [ERROR] TEST [Preferences test - verifyLogOutTest] FAILED at [14:34:14 2025-01-06] - A session is either terminated or not started
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.2', java.version: '21.0.5'
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [0374166b-f66f-46f9-95b6-919cd0ba3922, findElements {using=xpath, value=//XCUIElementTypeOther[@name="headerContainer"]/parent::XCUIElementTypeOther}]
+Capabilities {appium:app: /Users/solvd/Work/bench-tas..., appium:automationName: XCUITest, appium:databaseEnabled: false, appium:deviceName: "IPhone 16", appium:deviceType: phone, appium:javascriptEnabled: true, appium:language: en, appium:locale: en_US, appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:platformVersion: 18.2, appium:takesScreenshot: true, appium:udid: 14467021-38E4-419E-8D52-082..., appium:webStorageEnabled: false, platformName: IOS}
+Session ID: 0374166b-f66f-46f9-95b6-919cd0ba3922
+
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
+org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:102)
+org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:380)
+org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:372)
+io.appium.java_client.pagefactory.bys.ContentMappedBy.findElements(ContentMappedBy.java:54)
+org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElements(ElementLocation.java:146)
+org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:102)
+org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:380)
+org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:372)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.openqa.selenium.support.decorators.WebDriverDecorator.call(WebDriverDecorator.java:247)
+org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated.java:48)
+org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:309)
+net.bytebuddy.renamed.java.lang.Object$ByteBuddy$NF696nlB.findElements(Unknown Source)
+com.zebrunner.carina.webdriver.locator.ExtendedElementLocator.findElement(ExtendedElementLocator.java:146)
+org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+jdk.proxy2/jdk.proxy2.$Proxy89.findElements(Unknown Source)
+com.zebrunner.carina.webdriver.locator.ExtendedElementLocator.findElement(ExtendedElementLocator.java:146)
+org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+jdk.proxy2/jdk.proxy2.$Proxy89.findElements(Unknown Source)
+com.zebrunner.carina.webdriver.locator.ExtendedElementLocator.findElements(ExtendedElementLocator.java:169)
+com.zebrunner.carina.webdriver.locator.internal.LocatingListHandler.invoke(LocatingListHandler.java:71)
+jdk.proxy2/jdk.proxy2.$Proxy91.get(Unknown Source)
+solvd.carina.demo.gui.ios.pages.LeftSidebarPage.clickLogoutButton(LeftSidebarComponent.java:23)
+solvd.carina.demo.GUITests.verifyLogOutTest(GUITests.java:123)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
+java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+java.base/java.lang.Thread.run(Thread.java:1583)

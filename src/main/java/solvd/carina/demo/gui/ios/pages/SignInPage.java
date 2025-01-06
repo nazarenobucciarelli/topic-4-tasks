@@ -5,8 +5,9 @@ import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
+import solvd.carina.demo.gui.common.pages.SignInPageBase;
 
-public class SignInPage extends AbstractPage {
+public class SignInPage extends SignInPageBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"test-Username\"")
     private ExtendedWebElement usernameField;
@@ -19,6 +20,9 @@ public class SignInPage extends AbstractPage {
 
     @ExtendedFindBy(iosPredicate = "name == \"Username and password do not match any user in this service.\"")
     private ExtendedWebElement invalidCredentialsErrorMessage;
+
+    @ExtendedFindBy(iosPredicate = "name == \"Username is required\"")
+    private ExtendedWebElement requiredUsernameError;
 
     public SignInPage(WebDriver driver) {
         super(driver);
@@ -44,5 +48,9 @@ public class SignInPage extends AbstractPage {
 
     public boolean isInvalidCredentialsErrorMessageDisplayed() {
         return invalidCredentialsErrorMessage.isVisible();
+    }
+
+    public boolean isRequiredUsernameErrorDisplayed() {
+        return requiredUsernameError.isVisible();
     }
 }

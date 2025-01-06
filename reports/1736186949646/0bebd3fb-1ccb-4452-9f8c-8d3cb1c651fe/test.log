@@ -1,0 +1,15 @@
+[2025-01-06 06:13:47] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 06:13:47] [67] [INFO] TEST [Preferences test - verifyCartContentTest] STARTED at [15:13:47 2025-01-06]
+[2025-01-06 06:13:47] [67] [INFO] Starting driver session...
+[2025-01-06 06:13:55] [67] [INFO] Driver session started.
+[2025-01-06 06:13:57] [67] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-06 06:14:00] [67] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-06 06:14:02] [67] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-06 06:14:28] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:14:34] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:14:40] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:14:46] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:14:52] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:14:57] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:15:13] [67] [INFO] PASS: Tap on X:'348' Y:'55' was executed.
+[2025-01-06 06:15:48] [67] [INFO] TEST [Preferences test - verifyCartContentTest] PASSED at [15:15:48 2025-01-06]

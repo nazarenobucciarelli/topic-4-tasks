@@ -1,0 +1,17 @@
+[2025-01-06 06:09:11] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 06:09:11] [67] [INFO] TEST [Preferences test - checkoutFlowTest] STARTED at [15:09:11 2025-01-06]
+[2025-01-06 06:09:11] [67] [INFO] Starting driver session...
+[2025-01-06 06:09:12] [67] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-06 06:09:19] [67] [INFO] Driver session started.
+[2025-01-06 06:09:22] [67] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-06 06:09:25] [67] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-06 06:09:27] [67] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-06 06:09:53] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:10:09] [67] [INFO] PASS: Tap on X:'348' Y:'55' was executed.
+[2025-01-06 06:10:10] [67] [INFO] PASS: element 'checkoutButton' is clicked.
+[2025-01-06 06:10:14] [67] [INFO] PASS: keys 'John' are sent to element 'firstNameInput'.
+[2025-01-06 06:10:17] [67] [INFO] PASS: keys 'Doe' are sent to element 'lastNameInput'.
+[2025-01-06 06:10:21] [67] [INFO] PASS: keys '12345' are sent to element 'zipInput'.
+[2025-01-06 06:10:23] [67] [INFO] PASS: element 'continueButton' is clicked.
+[2025-01-06 06:10:25] [67] [INFO] PASS: element 'finishButton' is clicked.
+[2025-01-06 06:10:26] [67] [INFO] TEST [Preferences test - checkoutFlowTest] PASSED at [15:10:26 2025-01-06]

@@ -5,10 +5,11 @@ import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
+import solvd.carina.demo.gui.common.components.ProductListComponentBase;
 import solvd.carina.demo.gui.common.models.Product;
 import solvd.carina.demo.gui.ios.pages.ProductDetailPage;
 
-public class ProductListComponent extends AbstractUIObject {
+public class ProductListComponent extends ProductListComponentBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"test-Item title\"")
     private ExtendedWebElement title;

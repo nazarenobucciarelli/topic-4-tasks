@@ -1,9 +1,0 @@
-[2025-01-03 07:33:10] [64] [WARN] Reporting disabled: using no op test run registrar
-[2025-01-03 07:33:10] [64] [INFO] TEST [Preferences test - verifyAddingProductToCartTest] STARTED at [16:33:10 2025-01-03]
-[2025-01-03 07:33:10] [64] [INFO] Starting driver session...
-[2025-01-03 07:33:11] [64] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
-[2025-01-03 07:33:20] [64] [INFO] Driver session started.
-[2025-01-03 07:33:22] [64] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
-[2025-01-03 07:33:29] [64] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
-[2025-01-03 07:33:31] [64] [INFO] PASS: element 'loginButton' is clicked.
-[2025-01-03 07:34:05] [64] [INFO] PASS: element 'addToCartButton' is clicked.

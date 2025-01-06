@@ -1,12 +1,12 @@
 package solvd.carina.demo.gui.ios.components;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
+import solvd.carina.demo.gui.common.components.ProductCartComponentBase;
 
-public class ProductCartComponent extends AbstractUIObject {
+public class ProductCartComponent extends ProductCartComponentBase {
 
     @ExtendedFindBy(iosClassChain = "**/XCUIElementTypeOther[`name == \"test-Amount\"`]")
     private ExtendedWebElement amount;

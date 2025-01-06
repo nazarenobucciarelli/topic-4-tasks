@@ -1,0 +1,9 @@
+[2025-01-06 05:48:00] [64] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 05:48:00] [64] [INFO] TEST [Preferences test - verifyErrorEmptyFieldsLoginTest] STARTED at [14:48:00 2025-01-06]
+[2025-01-06 05:48:00] [64] [INFO] Starting driver session...
+[2025-01-06 05:48:01] [64] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-06 05:48:09] [64] [INFO] Driver session started.
+[2025-01-06 05:48:11] [64] [INFO] PASS: keys '' are sent to element 'usernameField'.
+[2025-01-06 05:48:14] [64] [INFO] PASS: keys '' are sent to element 'passwordField'.
+[2025-01-06 05:48:16] [64] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-06 05:51:19] [64] [INFO] TEST [Preferences test - verifyErrorEmptyFieldsLoginTest] PASSED at [14:51:19 2025-01-06]

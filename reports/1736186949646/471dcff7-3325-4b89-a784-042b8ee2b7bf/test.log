@@ -1,0 +1,9 @@
+[2025-01-06 06:17:42] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 06:17:42] [67] [INFO] TEST [Preferences test - verifyRemovingProductFromCartTest] STARTED at [15:17:42 2025-01-06]
+[2025-01-06 06:17:42] [67] [INFO] Starting driver session...
+[2025-01-06 06:17:50] [67] [INFO] Driver session started.
+[2025-01-06 06:17:52] [67] [INFO] PASS: keys 'standard_user' are sent to element 'usernameField'.
+[2025-01-06 06:17:56] [67] [INFO] PASS: keys 'secret_sauce' are sent to element 'passwordField'.
+[2025-01-06 06:17:57] [67] [INFO] PASS: element 'loginButton' is clicked.
+[2025-01-06 06:18:24] [67] [INFO] PASS: element 'addToCartButton' is clicked.
+[2025-01-06 06:18:34] [67] [INFO] TEST [Preferences test - verifyRemovingProductFromCartTest] PASSED at [15:18:34 2025-01-06]

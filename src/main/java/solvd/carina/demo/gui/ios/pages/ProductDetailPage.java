@@ -1,11 +1,11 @@
 package solvd.carina.demo.gui.ios.pages;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.gui.AbstractPage;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
+import solvd.carina.demo.gui.common.pages.ProductDetailPageBase;
 
-public class ProductDetailPage extends AbstractPage {
+public class ProductDetailPage extends ProductDetailPageBase {
 
     @ExtendedFindBy(iosClassChain = "**/XCUIElementTypeOther[`name == \"test-Description\"`]/XCUIElementTypeStaticText[1]")
     private ExtendedWebElement title;
