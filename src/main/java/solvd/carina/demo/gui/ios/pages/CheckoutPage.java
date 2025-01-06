@@ -1,10 +1,12 @@
 package solvd.carina.demo.gui.ios.pages;
 
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
 import solvd.carina.demo.gui.common.pages.CheckoutPageBase;
 
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = CheckoutPageBase.class)
 public class CheckoutPage extends CheckoutPageBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"test-First Name\"")

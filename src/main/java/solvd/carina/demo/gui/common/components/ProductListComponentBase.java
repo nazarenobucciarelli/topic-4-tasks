@@ -20,4 +20,6 @@ public abstract class ProductListComponentBase extends AbstractUIObject {
     public abstract ProductDetailPageBase goToDetail();
 
     public abstract boolean isRemoveButtonPresent();
+
+    public abstract void clickRemoveButton();
 }

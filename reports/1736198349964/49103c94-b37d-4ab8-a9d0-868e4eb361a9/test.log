@@ -1,0 +1,54 @@
+[2025-01-06 09:19:12] [67] [WARN] Reporting disabled: using no op test run registrar
+[2025-01-06 09:19:12] [67] [INFO] TEST [Preferences test - successfulLoginTest] STARTED at [18:19:12 2025-01-06]
+[2025-01-06 09:19:12] [67] [INFO] Starting driver session...
+[2025-01-06 09:19:12] [67] [ERROR] Failed to attach artifact reference 'app' to test run because it has not been started yet.
+[2025-01-06 09:20:26] [67] [ERROR] TEST [Preferences test - successfulLoginTest] FAILED at [18:20:26 2025-01-06] - Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized within 30000ms timeout. Make sure the application under test does not crash and investigate the logcat output. You could also try to increase the value of 'uiautomator2ServerLaunchTimeout' capability 
+Host info: host: 'solvds-MBP.fibertel.com.ar', ip: 'fe80:0:0:0:a9:b2b9:c27d:a450%en0'
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.2', java.version: '21.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:udid=emulator-5554, appium:locale=US, appium:language=en, platformName=ANDROID, appium:automationName=uiautomator2, appium:app=/Users/solvd/Work/bench-tasks/mobile_ios_android/task/src/main/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk}], desiredCapabilities=Capabilities {appium:app: /Users/solvd/Work/bench-tas..., appium:automationName: uiautomator2, appium:language: en, appium:locale: US, appium:udid: emulator-5554, platformName: ANDROID}}]
+Capabilities {}
+
+org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:148)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
+io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:231)
+com.zebrunner.carina.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:125)
+com.zebrunner.carina.webdriver.core.factory.DriverFactory.create(DriverFactory.java:87)
+com.zebrunner.carina.webdriver.IDriverPool.createDriver(IDriverPool.java:364)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:117)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:80)
+com.zebrunner.carina.webdriver.IDriverPool.getDriver(IDriverPool.java:68)
+com.zebrunner.carina.utils.factory.ICustomTypePageFactory.initPage(ICustomTypePageFactory.java:73)
+solvd.carina.demo.GUITests.login(GUITests.java:136)
+solvd.carina.demo.GUITests.successfulLoginTest(GUITests.java:20)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+java.base/java.lang.reflect.Method.invoke(Method.java:580)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+java.base/java.lang.Thread.run(Thread.java:1583)

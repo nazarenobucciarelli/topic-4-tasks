@@ -15,7 +15,7 @@ public abstract class HomePageBase extends AbstractPage {
 
     public abstract void selectSortOption(SortOption sortOption);
 
-    public abstract List<ProductListComponentBase> getProducts();
+    public abstract List<? extends ProductListComponentBase> getProducts();
 
     public abstract HeaderComponentBase getHeader();
 }

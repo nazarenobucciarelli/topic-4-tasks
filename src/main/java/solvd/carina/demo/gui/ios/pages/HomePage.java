@@ -1,5 +1,6 @@
 package solvd.carina.demo.gui.ios.pages;
 
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
@@ -14,13 +15,14 @@ import solvd.carina.demo.gui.ios.components.iOSNativeSelectComponent;
 
 import java.util.List;
 
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = HomePageBase.class)
 public class HomePage extends HomePageBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"PRODUCTS\" AND label == \"PRODUCTS\" AND value == \"PRODUCTS\"")
     private ExtendedWebElement productsTitle;
 
     @ExtendedFindBy(iosPredicate = "name == \"test-Item\"")
-    private List<ProductListComponentBase> products;
+    private List<ProductListComponent> products;
 
     @FindBy(xpath = "//XCUIElementTypeOther[@name=\"headerContainer\"]/parent::XCUIElementTypeOther")
     private HeaderComponent header;
@@ -43,7 +45,7 @@ public class HomePage extends HomePageBase {
         nativeSelect.selectOption(sortOption);
     }
 
-    public List<ProductListComponentBase> getProducts() {
+    public List<ProductListComponent> getProducts() {
         return products;
     }
 

@@ -1,7 +1,7 @@
 package solvd.carina.demo.gui.ios.components;
 
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
-import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +9,7 @@ import solvd.carina.demo.gui.common.components.ProductListComponentBase;
 import solvd.carina.demo.gui.common.models.Product;
 import solvd.carina.demo.gui.ios.pages.ProductDetailPage;
 
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = ProductListComponentBase.class)
 public class ProductListComponent extends ProductListComponentBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"test-Item title\"")
@@ -48,5 +49,9 @@ public class ProductListComponent extends ProductListComponentBase {
 
     public boolean isRemoveButtonPresent() {
         return removeButton.isPresent();
+    }
+
+    public void clickRemoveButton() {
+        removeButton.click();
     }
 }

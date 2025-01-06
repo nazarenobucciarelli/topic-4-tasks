@@ -1,5 +1,6 @@
 package solvd.carina.demo.gui.ios.pages;
 
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
@@ -7,6 +8,7 @@ import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
 import solvd.carina.demo.gui.common.pages.SignInPageBase;
 
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = SignInPageBase.class)
 public class SignInPage extends SignInPageBase {
 
     @ExtendedFindBy(iosPredicate = "name == \"test-Username\"")

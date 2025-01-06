@@ -1,5 +1,6 @@
 package solvd.carina.demo.gui.ios.components;
 
+import com.zebrunner.carina.utils.factory.DeviceType;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
@@ -10,6 +11,7 @@ import solvd.carina.demo.gui.common.components.HeaderComponentBase;
 import solvd.carina.demo.gui.ios.pages.CartPage;
 import solvd.carina.demo.gui.ios.pages.LeftSidebarPage;
 
+@DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = HeaderComponentBase.class)
 public class HeaderComponent extends HeaderComponentBase implements IMobileUtils {
 
     @FindBy(xpath = "//XCUIElementTypeOther[@name=\"test-Cart\"]/parent::XCUIElementTypeOther")
@@ -28,7 +30,12 @@ public class HeaderComponent extends HeaderComponentBase implements IMobileUtils
     }
 
     public Integer getCartCount() {
-        return Integer.parseInt(cartButton.getAttribute("label"));
+        Integer count = 0;
+        try {
+            return Integer.parseInt(cartButton.getAttribute("label"));
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
     public LeftSidebarPage clickMenuButton() {
