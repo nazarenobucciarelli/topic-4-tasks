@@ -1,6 +1,7 @@
 package solvd.carina.demo.gui.android.pages;
 
 import com.zebrunner.carina.utils.factory.DeviceType;
+import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import solvd.carina.demo.gui.common.pages.CheckoutPageBase;
 
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = CheckoutPageBase.class)
-public class CheckoutPage extends CheckoutPageBase {
+public class CheckoutPage extends CheckoutPageBase implements IMobileUtils {
 
     @ExtendedFindBy(accessibilityId = "test-First Name")
     private ExtendedWebElement firstNameInput;
@@ -54,6 +55,7 @@ public class CheckoutPage extends CheckoutPageBase {
 
     @Override
     public void clickFinishButton() {
+        swipe(finishButton);
         finishButton.click();
     }
 

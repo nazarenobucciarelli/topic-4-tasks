@@ -1,6 +1,7 @@
 package solvd.carina.demo.gui.android.components;
 
 import com.zebrunner.carina.utils.factory.DeviceType;
+import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.locator.ExtendedFindBy;
 import org.openqa.selenium.SearchContext;
@@ -12,7 +13,7 @@ import solvd.carina.demo.gui.common.models.Product;
 import solvd.carina.demo.gui.common.pages.ProductDetailPageBase;
 
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = ProductListComponentBase.class)
-public class ProductListComponent extends ProductListComponentBase {
+public class ProductListComponent extends ProductListComponentBase implements IMobileUtils {
 
     @FindBy(xpath = "//android.widget.TextView[@content-desc=\"test-Item title\"]")
     private ExtendedWebElement title;
@@ -42,6 +43,7 @@ public class ProductListComponent extends ProductListComponentBase {
 
     @Override
     public Product clickAddToCartButton() {
+        swipe(addButton);
         addButton.click();
         return new Product(getTitle(), getPrice());
     }
@@ -57,8 +59,13 @@ public class ProductListComponent extends ProductListComponentBase {
         return removeButton.isPresent();
     }
 
+    public ExtendedWebElement getAddButton() {
+        return addButton;
+    }
+
     @Override
     public void clickRemoveButton() {
         removeButton.click();
     }
+
 }
