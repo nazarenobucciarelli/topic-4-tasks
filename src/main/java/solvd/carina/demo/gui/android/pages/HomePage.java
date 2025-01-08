@@ -7,6 +7,7 @@ import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.decorator.PageOpeningStrategy;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import solvd.carina.demo.gui.android.components.AndroidNativeSelectComponent;
 import solvd.carina.demo.gui.android.components.HeaderComponent;
 import solvd.carina.demo.gui.android.components.ProductListComponent;
 import solvd.carina.demo.gui.common.components.HeaderComponentBase;
@@ -20,7 +21,7 @@ import java.util.List;
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = HomePageBase.class)
 public class HomePage extends HomePageBase implements IMobileUtils {
 
-    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]/.")
+    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]/..")
     private HeaderComponent header;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Modal Selector Button\"]")
@@ -32,6 +33,9 @@ public class HomePage extends HomePageBase implements IMobileUtils {
     @FindBy(xpath = "//android.widget.ScrollView[@content-desc=\"test-PRODUCTS\"]")
     private ExtendedWebElement container;
 
+    @FindBy(xpath = "//android.widget.ScrollView[@content-desc=\"Selector container\"]")
+    private AndroidNativeSelectComponent select;
+
     public HomePage(WebDriver driver) {
         super(driver);
         setPageOpeningStrategy(PageOpeningStrategy.BY_ELEMENT);
@@ -41,6 +45,7 @@ public class HomePage extends HomePageBase implements IMobileUtils {
     @Override
     public void selectSortOption(SortOption sortOption) {
         sortItemsButton.click();
+        select.selectOption(sortOption);
     }
 
     @Override
@@ -56,7 +61,7 @@ public class HomePage extends HomePageBase implements IMobileUtils {
                 ProductListComponent productListComponent = new ProductListComponent(driver, product);
                 try{
                     swipe(productListComponent.getAddButton());
-                    Product prod = new Product(productListComponent.getTitle(),productListComponent.getPrice());
+                    Product prod = new Product(productListComponent.saveTitleElement(),productListComponent.savePriceElement());
                     if (!foundProducts.contains(prod)) {
                         foundProducts.add(prod);
                         productListComponents.add(productListComponent);

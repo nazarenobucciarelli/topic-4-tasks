@@ -16,10 +16,10 @@ import solvd.carina.demo.gui.common.pages.ProductDetailPageBase;
 public class ProductListComponent extends ProductListComponentBase implements IMobileUtils {
 
     @FindBy(xpath = "//android.widget.TextView[@content-desc=\"test-Item title\"]")
-    private ExtendedWebElement title;
+    private ExtendedWebElement titleElement;
 
     @FindBy(xpath = "//android.widget.TextView[@content-desc=\"test-Price\"]")
-    private ExtendedWebElement price;
+    private ExtendedWebElement priceElement;
 
     @ExtendedFindBy(accessibilityId = "test-ADD TO CART")
     private ExtendedWebElement addButton;
@@ -27,18 +27,34 @@ public class ProductListComponent extends ProductListComponentBase implements IM
     @ExtendedFindBy(accessibilityId = "test-REMOVE")
     private ExtendedWebElement removeButton;
 
+    private String title;
+
+    private Float price;
+
     public ProductListComponent(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
+    public String saveTitleElement() {
+        String title = titleElement.getText();
+        this.title = title;
+        return title;
+    }
+
+    public Float savePriceElement() {
+        Float price = Float.parseFloat(priceElement.getText().substring(1));
+        this.price = price;
+        return price;
+    }
+
     @Override
     public String getTitle() {
-        return title.getText();
+        return this.title;
     }
 
     @Override
     public Float getPrice() {
-        return Float.parseFloat(price.getText().substring(1));
+        return this.price;
     }
 
     @Override
@@ -50,7 +66,7 @@ public class ProductListComponent extends ProductListComponentBase implements IM
 
     @Override
     public ProductDetailPageBase goToDetail() {
-        title.click();
+        titleElement.click();
         return new ProductDetailPage(driver);
     }
 

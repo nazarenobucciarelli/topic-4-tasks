@@ -9,11 +9,12 @@ import solvd.carina.demo.gui.common.components.NativeSelectComponentBase;
 import solvd.carina.demo.gui.common.models.SortOption;
 
 import java.util.List;
+import java.util.Optional;
 
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = NativeSelectComponentBase.class)
 public class AndroidNativeSelectComponent extends NativeSelectComponentBase {
 
-    @FindBy(xpath = "/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
+    @FindBy(xpath = "//android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
     List<ExtendedWebElement> options;
 
     public AndroidNativeSelectComponent(WebDriver driver, SearchContext searchContext) {
@@ -24,7 +25,6 @@ public class AndroidNativeSelectComponent extends NativeSelectComponentBase {
         options.stream()
                 .filter(opt -> opt.getAttribute("text") != null &&
                         opt.getAttribute("text").equalsIgnoreCase(sortOption.getName()))
-                .findFirst().//fixxxx
-                ifPresent(ExtendedWebElement::click);
+                .findFirst().ifPresent(ExtendedWebElement::click);
     }
 }

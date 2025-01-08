@@ -29,10 +29,12 @@ public class ProductListComponent extends ProductListComponentBase {
         super(driver, searchContext);
     }
 
+    @Override
     public String getTitle() {
         return title.getText();
     }
 
+    @Override
     public Float getPrice() {
         return Float.parseFloat(price.getText().substring(1));
     }

@@ -19,7 +19,7 @@ public class HeaderComponent extends HeaderComponentBase {
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]")
     private ExtendedWebElement cart;
 
-    @ExtendedFindBy(accessibilityId = "test-Menu")
+    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Menu\"]")
     private ExtendedWebElement menuButton;
 
     public HeaderComponent(WebDriver driver, SearchContext searchContext) {
