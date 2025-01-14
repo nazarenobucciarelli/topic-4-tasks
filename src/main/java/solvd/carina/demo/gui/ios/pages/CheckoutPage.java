@@ -54,4 +54,12 @@ public class CheckoutPage extends CheckoutPageBase {
     public boolean isThanksForYourOrderTextDisplayed() {
         return thanksForYouOrderText.isVisible();
     }
+
+    public void checkout(String firstName, String lastName, String zip) {
+        enterFirstName(firstName);
+        enterLastName(lastName);
+        enterZip(zip);
+        clickContinueButton();
+        clickFinishButton();
+    }
 }

@@ -19,4 +19,6 @@ public abstract class CheckoutPageBase extends AbstractPage {
     public abstract void clickFinishButton();
 
     public abstract boolean isThanksForYourOrderTextDisplayed();
+
+    public abstract void checkout(String firstName, String lastName, String zip);
 }

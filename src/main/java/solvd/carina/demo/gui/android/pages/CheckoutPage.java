@@ -63,4 +63,13 @@ public class CheckoutPage extends CheckoutPageBase implements IMobileUtils {
     public boolean isThanksForYourOrderTextDisplayed() {
         return thankYouForYourOrderText.isPresent();
     }
+
+    @Override
+    public void checkout(String firstName, String lastName, String zip) {
+        enterFirstName(firstName);
+        enterLastName(lastName);
+        enterZip(zip);
+        clickContinueButton();
+        clickFinishButton();
+    }
 }
