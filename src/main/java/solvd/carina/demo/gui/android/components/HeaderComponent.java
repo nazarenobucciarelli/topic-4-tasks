@@ -16,7 +16,8 @@ import solvd.carina.demo.gui.android.pages.CartPage;
 @DeviceType(pageType = DeviceType.Type.ANDROID_PHONE, parentClass = HeaderComponentBase.class)
 public class HeaderComponent extends HeaderComponentBase {
 
-    @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]")
+    @ExtendedFindBy(androidUIAutomator = "new UiSelector().description(\"test-Cart\")" +
+            ".childSelector(new UiSelector().classNameMatches(\".*Text.*\"))")
     private ExtendedWebElement cart;
 
     @FindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Menu\"]")
@@ -34,13 +35,14 @@ public class HeaderComponent extends HeaderComponentBase {
 
     @Override
     public Integer getCartCount() {
-        try {
-            String cartCount = cart.findExtendedWebElement(By.xpath("//android.widget.TextView"))
-                    .getAttribute("text");
-            return Integer.parseInt(cartCount);
-        } catch (NumberFormatException | NoSuchElementException e) {
-            return null;
+        if (cart.isElementPresent(3)) {
+            try {
+                return Integer.parseInt(cart.getText().trim());
+            } catch (NumberFormatException e) {
+                System.err.println("Error parsing cart item count: " + e.getMessage());
+            }
         }
+        return 0;
     }
 
     @Override

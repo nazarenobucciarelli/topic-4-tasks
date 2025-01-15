@@ -26,19 +26,16 @@ public class ProductCartComponent extends ProductCartComponentBase implements IM
 
     @Override
     public Integer getAmount() {
-        swipe(amount);
         return Integer.parseInt(amount.getText());
     }
 
     @Override
     public String getTitle() {
-        swipe(title);
         return title.getText();
     }
 
     @Override
     public Float getPrice() {
-        swipe(price);
         return Float.parseFloat(price.getText().substring(1));
     }
 }
